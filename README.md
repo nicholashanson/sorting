@@ -8,8 +8,9 @@ Bars view with Quicksort:
 
 ![sorting](https://github.com/user-attachments/assets/35748222-257c-4cf1-9f56-bd4e7e2ff4bf)
 
-
+Squares view with Bucketsort: 
  
+![squares](https://github.com/user-attachments/assets/0a44c26d-06e2-44bc-b1c6-e0595f626869)
 
 
 
