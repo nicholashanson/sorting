@@ -12,7 +12,7 @@ Squares view with Bucketsort:
  
 ![squares](https://github.com/user-attachments/assets/0a44c26d-06e2-44bc-b1c6-e0595f626869)
 
-
+![performance](https://github.com/user-attachments/assets/dd077c76-38a7-4d3a-9267-87e02c3c9e81)
 
 
 
