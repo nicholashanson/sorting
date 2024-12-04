@@ -18,7 +18,7 @@ As expected, bubblesort and cocktailsort perform progressively worse as the data
 
 Insertionsort and selectionsort have better performance.
 
-Quicksort and bucketsort
+Quicksort and bucketsort handle growth in the size of the data set very well.
 
 ![performance](https://github.com/user-attachments/assets/dd077c76-38a7-4d3a-9267-87e02c3c9e81)
 
