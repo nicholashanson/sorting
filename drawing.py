@@ -2,25 +2,35 @@ import settings
 from globals import squares, values, bars
 
 def draw_squares(squares_canvas, data):
+    # reset canvas elements
     squares.clear()
     values.clear()
-    for index, data_point in enumerate( data ):      
+
+    for index, data_point in enumerate( data ):
+        # draw elements to canvas      
         square, value = draw_square( squares_canvas,
                                      index, 
                                      data_point,
                                      settings.unsorted_partition_color )
+        # append elements to global containers
         squares.append( square )
         values.append( value )
-    print( len( squares ) )
 
 def draw_bars(bars_canvas, data):
-    x_offset = ( settings.total_elements - len( data ) ) * settings.bar_span 
+    # reset canvas bars container
     bars.clear()
-    for index, data_point in enumerate( data ):      
+
+    # if there are less data, shift bars to the right
+    x_offset = ( settings.total_elements - len( data ) ) * settings.bar_span
+
+    
+    for index, data_point in enumerate( data ): 
+        # draw bar to canvas     
         bar = draw_bar( bars_canvas,
                         index, 
                         data_point,
                         x_offset )
+        # append bar to canvas bars container
         bars.append( bar )
 
 def draw_bar(bars_canvas, index, data_point, x_offset):    
