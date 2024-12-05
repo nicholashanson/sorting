@@ -2,6 +2,10 @@ import settings
 from globals import squares, values, bars
 
 def draw_squares(squares_canvas, data):
+    ''' 
+    draws all the elements of the square view to the view canvas
+    and appends their handles to the corresponding global containers 
+    '''
     # reset canvas elements
     squares.clear()
     values.clear()
@@ -17,6 +21,10 @@ def draw_squares(squares_canvas, data):
         values.append( value )
 
 def draw_bars(bars_canvas, data):
+    ''' 
+    draws all the elements of the bars view to the view canvas
+    and appends their handle to the global bars container
+    '''
     # reset canvas bars container
     bars.clear()
 
@@ -33,7 +41,8 @@ def draw_bars(bars_canvas, data):
         # append bar to canvas bars container
         bars.append( bar )
 
-def draw_bar(bars_canvas, index, data_point, x_offset):    
+def draw_bar(bars_canvas, index, data_point, x_offset):
+    ''' draws a rectangle to the view canvas and returns its handle '''    
     return bars_canvas.create_rectangle( settings.bars_x_offset + index * settings.bar_span + x_offset,
                                          settings.bars_y_offset,
                                          settings.bars_x_offset + index * settings.bar_span + settings.bar_width + x_offset,
@@ -42,6 +51,7 @@ def draw_bar(bars_canvas, index, data_point, x_offset):
 
 def swap_elements(canvas, container, lhs_index, rhs_index, element_span,
                   dimensions = 1):
+    ''' a generic function that swaps the position of two elements on the view canvas '''
     if ( lhs_index == rhs_index ):
         return
     
@@ -75,6 +85,10 @@ def swap_elements(canvas, container, lhs_index, rhs_index, element_span,
 
 
 def draw_square(squares_canvas, index, data_point, color):
+    ''' 
+    draws a square element and its corresponding text widget to the view canvas 
+    and returns their handles as a tuple
+    '''
     # draw square to contain element
     square = squares_canvas.create_rectangle( ( index % 20 ) * settings.square_span, 
                                               ( index // 20 ) * settings.square_span + settings.square_width, 
